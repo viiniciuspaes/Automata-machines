@@ -24,7 +24,7 @@ class Automata:
         for element in language:
             if element not in self.alphabet:
                 self.current_state = None
-                return "Language contains characters not included in this automato alphabet"
+                return False #Language contains characters not included in this automato alphabet
             try:
                 self.current_state = self.transistion_fuction[str(self.current_state)][element]
                 print("Actual state {}".format(self.current_state))
